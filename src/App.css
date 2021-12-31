@@ -1,0 +1,173 @@
+.app {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 1280px;
+  height: 720px;
+  grid-template-columns: 960px 320px;
+  grid-template-rows: 540px 180px;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.screen {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background-size: auto auto;
+  background-color: white;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    gray 10px,
+    gray 20px
+  );
+}
+
+.side {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: auto auto 1fr;
+}
+
+.footer {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  padding: 1rem;
+  padding-right: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.header-title {
+  display: inline-block;
+  font-size: 4.5rem;
+  line-height: 1.5;
+  font-weight: bold;
+  color: #0288d1;
+}
+
+.header-description {
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #b3b1e6;
+}
+
+.status {
+  color: #ffffff;
+}
+
+.status-header {
+  font-size: 1.2rem;
+  margin-bottom: -2rem;
+}
+
+.status-main {
+  text-align: center;
+}
+
+.status-count {
+  padding-left: 3rem;
+  padding-right: 1rem;
+  font-size: 4rem;
+}
+
+.status-suffix {
+  font-size: 2rem;
+}
+
+.submissions {
+  background-color: #ffffff;
+  overflow: hidden;
+  box-shadow: inset 0 -2rem 2rem -1rem rgba(0, 0, 0, 0.25);
+}
+
+.submission {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.submission-datetime {
+  width: 35%;
+}
+
+.submission-problem-id {
+  width: 35%;
+}
+
+.submission-result {
+  width: 30%;
+}
+
+.result-badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #f0ad4e;
+  color: #ffffff;
+  font-size: 75%;
+  font-weight: bold;
+}
+
+.result-badge[data-result='AC'] {
+  background-color: #5cb85c;
+}
+
+.submission:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.comments {
+  background-color: #ffffff;
+  overflow: hidden;
+  box-shadow: inset 0 -2rem 2rem -1rem rgba(0, 0, 0, 0.25);
+}
+
+.comment {
+  border-left: 0.5rem solid transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.comment:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.comment[data-service='twitter'] {
+  border-left-color: #1da1f2;
+}
+
+.comment[data-service='youtube'] {
+  border-left-color: #ff0000;
+}
+
+.comment > img {
+  height: 2rem;
+  padding-right: 0.5rem;
+  vertical-align: middle;
+}
